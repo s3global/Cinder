@@ -535,7 +535,7 @@ class CI_API Capsule : public Source {
 	void		loadInto( Target *target, const AttribSet &requestedAttribs ) const override;
 	Capsule*	clone() const override { return new Capsule( *this ); }
 
-  private:
+  protected:
 	void	updateCounts();
 	void	calculate( std::vector<vec3> *positions, std::vector<vec3> *normals, std::vector<vec2> *texCoords, std::vector<vec3> *colors, std::vector<uint32_t> *indices ) const;
 	void	calculateRing( size_t segments, float radius, float y, float dy, std::vector<vec3> *positions,
