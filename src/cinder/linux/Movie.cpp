@@ -198,6 +198,11 @@ bool MovieBase::setRate( float rate )
     return mGstPlayer->setRate( rate );
 }
 
+float MovieBase::getRate() const
+{
+    return mGstPlayer->getRate();
+}
+
 void MovieBase::setVolume( float volume )
 {
     mGstPlayer->setVolume( volume );
