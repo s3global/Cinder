@@ -109,7 +109,7 @@ list( APPEND CINDER_INCLUDE_SYSTEM_PRIVATE
 # NOTE: UNICODE and _UNICODE forces generator to use Unicode instead of MultiByte
 list( APPEND CINDER_DEFINES "_LIB;UNICODE;_UNICODE;NOMINMAX;_WIN32_WINNT=0x0601;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS" )
 
-if( MSVC )
+if( MSVC AND NOT MSVC_RUNTIME_LIB_MD )
 	# Override the default /MD with /MT
 	foreach( 
 		flag_var
